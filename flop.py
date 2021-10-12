@@ -8,7 +8,6 @@ class Parent():
         def fancy(self):
             print(str(self.Matrix[0]) + "\n" + str(self.Matrix[1]) + "\n" + str(self.Matrix[2]))
             return self.Matrix
-
     class math():        
         def exponents(num, power):
             return num ** power
@@ -48,3 +47,23 @@ class Parent():
             return (3.14159 * (radius**2)) * height/3
         def volume_sphere(radius):
             return ((4/3*3.14159) * (radius**3))
+# function as class
+    def search(int, lookfor):
+        if type(int) == list:
+            for iterate in range(len(int)):
+                if lookfor in int[iterate]:
+                    return True
+                else:
+                    return False
+        elif type(int) == type(1):
+            while (int>0):
+                n = int%10
+                int = int//10
+
+                if n==lookfor:
+                    return True         
+            return False
+        else:
+            print("Flop currently only has support for type int and list!")
+
+
