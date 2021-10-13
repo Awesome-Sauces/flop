@@ -1,4 +1,17 @@
 #############################
+### Flop Settings Manager ###
+#############################
+class Settings:
+    def __init__(self, StartUp, pieDefine):
+        self.startupState = StartUp
+        self.pi = pieDefine
+    def startup(self):
+            global PI
+            PI = self.pi
+    def changeCurrent(self):
+        return
+
+#############################
 ### Main Section of Flop ####
 #############################
 class Parent():
@@ -45,11 +58,11 @@ class Parent():
             return sorted(list_args, reverse=False)
             
         def volume_cylinder(radius, height):
-            return (3.14159 * (radius**2)) * height
+            return (PI * (radius**2)) * height
         def volume_cone(radius, height):
-            return (3.14159 * (radius**2)) * height/3
+            return (PI * (radius**2)) * height/3
         def volume_sphere(radius):
-            return ((4/3*3.14159) * (radius**3))
+            return ((4/3*PI) * (radius**3))
 # function as class
     def search(int, lookfor):
         if type(int) == list:
@@ -68,11 +81,8 @@ class Parent():
             return False
         else:
             print("Flop currently only has support for type int and list!")
-#############################
-### Flop Settings Manager ###
-#############################
-class Settings:
-    def startup():
-        return
+
+
+
 
 
