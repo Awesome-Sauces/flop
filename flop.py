@@ -1,3 +1,6 @@
+#############################
+### Main Section of Flop ####
+#############################
 class Parent():
     class matrix():
         def __init__(self, *args):
@@ -65,5 +68,11 @@ class Parent():
             return False
         else:
             print("Flop currently only has support for type int and list!")
+#############################
+### Flop Settings Manager ###
+#############################
+class Settings:
+    def startup():
+        return
 
 
