@@ -9,7 +9,8 @@ class Settings:
             global PI
             PI = self.pi
     def changeCurrent(self):
-        return
+        global PI
+        PI = self.pi
 
 #############################
 ### Main Section of Flop ####
@@ -63,8 +64,12 @@ class Parent():
             return (PI * (radius**2)) * height/3
         def volume_sphere(radius):
             return ((4/3*PI) * (radius**3))
+#############################
+### Search Section of Flop ##
+#############################
 # function as class
-    def search(int, lookfor):
+class Search(Parent):
+    def integer(int, lookfor):
         if type(int) == list:
             for iterate in range(len(int)):
                 if lookfor in int[iterate]:
@@ -81,8 +86,4 @@ class Parent():
             return False
         else:
             print("Flop currently only has support for type int and list!")
-
-
-
-
 
