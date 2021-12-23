@@ -6,9 +6,6 @@ Manages Global variables
 Changes them
 And can declare them
 '''
-from typing import Type
-
-
 class Settings:
     def __init__(self, StartUp, pieDefine, fancyShow=True):
         self.startupState = StartUp
@@ -103,6 +100,8 @@ class Parent():
             return (PI * (radius**2)) * height/3
         def volume_sphere(radius):
             return ((4/3*PI) * (radius**3))
+        def one_step_equations():
+            return
 #############################
 ### Search Engine of Flop ###
 #############################
@@ -139,3 +138,18 @@ class Search(Parent):
                     return False
         else:
             raise ValueError("Enter a String!")
+
+
+
+
+
+# BETA
+from dataclasses import dataclass
+@dataclass
+class DataClassCard:
+    rank: str
+    suit: str
+    def output(self):
+        print(self.rank)
+queen_of_hearts = DataClassCard('Q', 'Hearts')
+queen_of_hearts.output()
